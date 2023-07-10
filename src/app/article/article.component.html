@@ -1,0 +1,17 @@
+<h1>Administración de artículos</h1>
+<table>
+  <tr>
+    <th>Codigo</th>
+    <th>Descripcion</th>
+    <th>Precio</th>
+    <th>Borrar</th>
+    <th>Seleccionar</th>
+  </tr>
+  <tr *ngFor="let article of data; let i = index" [class.selected]="selectedRow === i">
+    <td>{{ article.codigo }}</td>
+    <td>{{ article.descripcion }}</td>
+    <td>{{ article.precio }}</td>
+    <td><button (click)="borrarFila(i)">Borrar</button></td>
+    <td><button (click)="seleccionarFila(i)">Seleccionar</button></td>
+  </tr>
+</table>
