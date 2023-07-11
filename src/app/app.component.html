@@ -9,9 +9,9 @@
 
 <app-article [data]="articulos" (seleccionar)="seleccionarArticulo($event)"></app-article>
 <div>
-  <p>Codigo: <input type="text" [(ngModel)]="codigo"></p>
+  <p>Codigo: <input type="number" [(ngModel)]="codigo"></p>
   <p>Descripcion: <input type="text" [(ngModel)]="descripcion"></p>
-  <p>Precio: <input type="text" [(ngModel)]="precio"></p>
+  <p>Precio: <input type="number" [(ngModel)]="precio"></p>
   <button (click)="agregarArticulo()">Agregar</button>
   <button (click)="modificarArticulo()">Modificar</button>
 </div>
